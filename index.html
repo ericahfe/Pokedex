@@ -1,44 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokedex</title>
 </head>
+
 <body>
   <div id="app">
-
+    <input id="search" type="text" />
   </div>
-    
-    <script>
-         const section = document.createElement("section")
-         section.classList.add("pokedex")
-         const container = document.createElement("div")
-         container.classList.add("container")
-         section.appendChild(container)
-         document.getElementById("app").appendChild(section)
 
+  <script src="app.js"></script>
 
-
-        const who_is_that_pokemon_info = (pokemon) => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-        .then(function(response) {
-        return response.json();
-  })
-  .then(function(call_pokemon) {
-    console.log(call_pokemon);
-  });
-}
-who_is_that_pokemon_info("bulbasaur");
-     const who_is_that_pokemon = document.createElement("p")  
-      who_is_that_pokemon.appendChild(who_is_that_pokemon_info)
-     
-container.appendChild(who_is_that_pokemon)
-
-  
-
-         
-    </script>
 </body>
 </html>
