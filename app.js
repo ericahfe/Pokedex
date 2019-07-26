@@ -1,27 +1,24 @@
 const input = document.getElementById("search");
 const button = document.getElementById("button");
+const pokemonName = document.getElementById("pokemonName");
+const pokemonImage = document.getElementById("pokemonImage");
 
 
-function find () {
-    document.getElementById()
-}
-input.addEventListener("input", (event) => { 
-button.click
 
-const pokemon = event.target.value;
-who_is_that_pokemon_info(pokemon);
-
+button.addEventListener("click", (event) => {
+    const valor = input.value;
+    getPokemon(valor);
 });
-const who_is_that_pokemon_info = (pokemon) => {
+
+const getPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-
         .then((response) => response.json())
-
-        .then((call_pokemon) => {
-            console.log(call_pokemon);
-
-        }
-        );
-
+        .then((pokemon) => {
+            console.log(pokemon);
+            pokemonName.innerHTML = pokemon.name;
+            pokemonImage.setAttribute("src", pokemon.sprites.front_default);
+        }).catch((error) => {
+            alert("Lo sentimos no encontramos ese pokemon")
+        })
 }
 
