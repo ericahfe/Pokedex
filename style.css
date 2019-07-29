@@ -1,0 +1,59 @@
+body{
+    font-family: 'Fjalla One', sans-serif;
+    background-color: #E0D7D7;
+}
+.pokedex__title{
+    width: 400px;
+    justify-content: center;
+    margin-bottom: none;
+    font-size: 34px;
+}
+.pokedex__structure{
+   width: 600px;
+   margin-top: none;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content:center;
+   margin-top: 120px;
+   background-color: #FF4343;
+}
+.pokemon__info{
+    width: 500px;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+#pokemonContainer{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+#pokemonName{
+font-size: 20px;
+font-weight: 800;
+
+}
+#pokemonImage{
+width: 300px;
+height: 300px;
+}
+#PokemonNumber{
+font-style: italic;
+color: #888080;
+}
+#search{
+width: 500px;
+height: 60px;
+font-size: 32px;
+}
+#button{
+width: 300px;
+height: 60px;
+background-color: #FF4343;
+}
+button:hover{
+    color: aliceblue;
+    background-color: #000000;
+}
