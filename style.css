@@ -1,59 +1,78 @@
-body{
-    font-family: 'Fjalla One', sans-serif;
-    background-color: #E0D7D7;
+body {
+  font-family: "Fjalla One", sans-serif;
+  background-color: #e0d7d7;
 }
-.pokedex__title{
-    width: 400px;
-    justify-content: center;
-    margin-bottom: none;
-    font-size: 34px;
+.pokedex__title {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  margin-bottom: none;
+  font-size: 34px;
 }
-.pokedex__structure{
-   width: 600px;
-   margin-top: none;
-   margin-left: auto;
-   margin-right: auto;
-   justify-content:center;
-   margin-top: 120px;
-   background-color: #FF4343;
+.pokedex__structure {
+  width: 600px;
+  margin-top: none;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 120px;
+  background-color: #ff4343;
 }
-.pokemon__info{
-    width: 500px;
-    justify-content: center;
-    align-items:center;
-    
+.pokedex__header{
+    display: flex;
+}
+.pokedex__pokeball{
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.pokemon__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#pokemonContainer{
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+#pokemonContainer {
+  justify-content: left;
+  display: flex;
+  margin-left: 20px;
 }
-#pokemonName{
-font-size: 20px;
-font-weight: 800;
-
+#pokemonName {
+  font-size: 20px;
+  font-weight: 800;
+  justify-content: center;
 }
-#pokemonImage{
-width: 300px;
-height: 300px;
+.pokemon__img {
+  justify-content: center;
 }
-#PokemonNumber{
-font-style: italic;
-color: #888080;
+#pokemonImage {
+  width: 300px;
+  height: 300px;
 }
-#search{
-width: 500px;
-height: 60px;
-font-size: 32px;
+#PokemonNumber {
+  display: flex;
+  font-style: italic;
+  color: #888080;
+  justify-content: center;
+  
 }
-#button{
-width: 300px;
-height: 60px;
-background-color: #FF4343;
+#search {
+  width: 60%;
+  height: 60px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
-button:hover{
-    color: aliceblue;
-    background-color: #000000;
+#button {
+  width: 20%;
+  height: 60px;
+  background-color: #ff4343;
+}
+.pokedex__form{
+  display: flex;
+  justify-content: space-around;
+}
+button:hover {
+  color: aliceblue;
+  background-color: #000000;
 }
