@@ -11,38 +11,43 @@
 </head>
 
 <body>
-  
+
   <div id="app">
     <article class="pokedex__structure">
       <div class="pokedex__header">
-      <h2 class="pokedex__title">Pokedex</h2>
-      <img class="pokedex__pokeball" src="pokeball.png">
-    </div>
+        <h2 class="pokedex__title">Pokedex</h2>
+        <img class="pokedex__pokeball" src="pokeball.png">
+      </div>
       <div id="pokemonContainer">
-          <div>
-            <figure class="pokemon__img">
-              <img id="pokemonImage">
-            </figure>
-          </div>
-          <div class="pokedex__stats">
+        <div>
+          <figure class="pokemon__img">
+            <img id="pokemonImage">
+          </figure>
+        </div>
+        <div class="pokedex__stats">
 
-          </div>
-    </div>
-    <div class="pokemon__info">
-    <h1 id="pokemonName"></h1>
-    <h4 id="pokemonNumber">#</h4>
-    <h4 id="pokemonType"></h4>
-     
-    </div> 
-    <div class="pokedex__form">
-    <input id="search" type="text" />
-    <button id="button"> Buscar Pokemon</button> 
-    <input id="checkbox" type="checkbox">
+        </div>
+      </div>
+      <div class="pokemon__info">
+        <h4 id="pokemonNumber">#</h4>
+        <h1 id="pokemonName"></h1>
+        <h4 id="pokemonType"></h4>
+
+      </div>
+      <div class="pokedex__form">
+        <input id="search" type="text" />
+        <button id="button"> Buscar Pokemon</button>
+      </div>
+      <div class="pokedex__showShiny">
+        <label for="showShiny">Mostrar solo los Shiny</label>
+        <input id="showShiny" type="checkbox">
+      </div>
     </article>
-    </div>
+
   </div>
 
   <script src="app.js"></script>
 
 </body>
+
 </html>

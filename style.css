@@ -1,6 +1,6 @@
 body {
   font-family: "Fjalla One", sans-serif;
-  background-color: #e0d7d7;
+  background-color: #fafafa;
 }
 .pokedex__title {
   display: flex;
@@ -11,6 +11,7 @@ body {
 }
 .pokedex__structure {
   width: 600px;
+  border-radius: 10%;
   margin-top: none;
   margin-left: auto;
   margin-right: auto;
@@ -18,10 +19,10 @@ body {
   margin-top: 120px;
   background-color: #ff4343;
 }
-.pokedex__header{
-    display: flex;
+.pokedex__header {
+  display: flex;
 }
-.pokedex__pokeball{
+.pokedex__pokeball {
   width: 30px;
   height: 30px;
   align-self: center;
@@ -34,14 +35,13 @@ body {
 }
 
 #pokemonContainer {
-  justify-content: left;
   display: flex;
-  margin-left: 20px;
+  justify-content: center;
 }
 #pokemonName {
   font-size: 20px;
   font-weight: 800;
-  justify-content: center;
+  align-self: center;
 }
 .pokemon__img {
   justify-content: center;
@@ -55,7 +55,6 @@ body {
   font-style: italic;
   color: #888080;
   justify-content: center;
-  
 }
 #search {
   width: 60%;
@@ -68,11 +67,18 @@ body {
   height: 60px;
   background-color: #ff4343;
 }
-.pokedex__form{
+.pokedex__form {
   display: flex;
   justify-content: space-around;
+}
+.pokedex__showShiny {
+  margin-left: 100px;
 }
 button:hover {
   color: aliceblue;
   background-color: #000000;
+}
+.pokedex__type--grass {
+  border: black solid 5px;
+  background-color: #68b66d;
 }
