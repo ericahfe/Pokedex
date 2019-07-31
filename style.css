@@ -29,19 +29,25 @@ body {
 }
 .pokemon__info {
   width: 100%;
+  margin-top: -50px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around
 }
-
-#pokemonContainer {
+#PokemonNumber {
   display: flex;
+  font-style: italic;
+  color: #888080;
   justify-content: center;
 }
 #pokemonName {
   font-size: 20px;
   font-weight: 800;
-  align-self: center;
+  margin-left: 50px;
+}
+#pokemonContainer {
+  display: flex;
+  justify-content: center;
 }
 .pokemon__img {
   justify-content: center;
@@ -50,12 +56,8 @@ body {
   width: 300px;
   height: 300px;
 }
-#PokemonNumber {
-  display: flex;
-  font-style: italic;
-  color: #888080;
-  justify-content: center;
-}
+
+
 #search {
   width: 60%;
   height: 60px;
@@ -78,7 +80,201 @@ button:hover {
   color: aliceblue;
   background-color: #000000;
 }
-.pokedex__type--grass {
-  border: black solid 5px;
-  background-color: #68b66d;
+#pokemonType{
+  width: 25%;
+  margin-right: -70px;
+  
+  
 }
+.pokedex__type--grass {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #149B38;
+  font-weight: 300;
+}
+.pokedex__type--poison {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #CC66FF;
+  font-weight: 300;
+}
+.pokedex__type--fire {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color:#8B0000;
+  font-weight: 300;
+}
+.pokedex__type--flying {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #C5C8C9;
+  font-weight: 300;
+}
+.pokedex__type--water {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #197FBA;
+  font-weight: 300;
+}
+.pokedex__type--bug {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #68b66d;
+  font-weight: 300;
+}
+.pokedex__type--normal {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: gray;
+  font-weight: 300;
+}
+.pokedex__type--electric {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #E8DC30;
+  font-weight: 300;
+}
+.pokedex__type--ground {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #B28C40;
+  font-weight: 300;
+}
+.pokedex__type--fairy {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #FF8EF5;
+  font-weight: 300;
+}
+.pokedex__type--fighting {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #FF8900;
+  font-weight: 300;
+}
+.pokedex__type--psychic {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #F92BFF;
+  font-weight: 300;
+}
+.pokedex__type--rock {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #996633;
+  font-weight: 300;
+}
+.pokedex__type--steel {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #C0C0C0	;
+  font-weight: 300;
+}
+.pokedex__type--ice {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #00BFFF	;
+  font-weight: 300;
+}
+.pokedex__type--ghost {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #70369C	;
+  font-weight: 300;
+}
+.pokedex__type--dragon {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #FF5858	;
+  font-weight: 300;
+}
+.pokedex__type--dark {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #fafafa;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  border-radius: 40%;
+  background-color: #303030	;
+  font-weight: 300;
+}
+
+

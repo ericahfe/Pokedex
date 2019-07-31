@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <title>Pokedex</title>
 </head>
 
@@ -16,22 +17,32 @@
     <article class="pokedex__structure">
       <div class="pokedex__header">
         <h2 class="pokedex__title">Pokedex</h2>
-        <img class="pokedex__pokeball" src="pokeball.png">
+        <img class="pokedex__pokeball" src="img/pokeball.png">
       </div>
       <div id="pokemonContainer">
-        <div>
+        <div class="pokedex__margin__none">
           <figure class="pokemon__img">
             <img id="pokemonImage">
           </figure>
         </div>
         <div class="pokedex__stats">
-
+          <h3 id="pokemonHeight"></h3>
+          <h3 id="pokemonWeight"></h3>
         </div>
       </div>
       <div class="pokemon__info">
         <h4 id="pokemonNumber">#</h4>
         <h1 id="pokemonName"></h1>
         <h4 id="pokemonType"></h4>
+      <div class="evolution__chain">
+        <h4 id="evolutionName1"></h4>
+        <div>
+          <figure>
+            <img id="evoulutionImg1">
+          </figure>
+        </div>
+
+      </div>
 
       </div>
       <div class="pokedex__form">
