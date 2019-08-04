@@ -33,11 +33,11 @@ const evolutions = {
     bulbasaur: [
         {
             evolutionName: "ivysaur",
-            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
         },
         {
             evolutionName: "venusaur",
-            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
         }
     ]
 }
@@ -56,14 +56,26 @@ const getPokemon = (pokemon) => {
             pokemonType.innerHTML = null;
             pokemonNumber.innerHTML = pokemon.id;
             pokemonName.innerHTML = pokemon.name;
-
             pokemonHeight.innerHTML = pokemon.height;
             pokemonWeight.innerHTML = pokemon.weight;
-
+            pokemonEvolution.innerHTML = null;
             if (pokemon.name.toLowerCase() == "bulbasaur") {
                 for (let i = 0; i < evolutions.bulbasaur.length; i++) {
                     createPokemonEvolutions(evolutions.bulbasaur[i]);
+                    
                 }
+                if (pokemon.name == "squirtle") {
+                    for (let i = 0 ; i < evolutions.squirtle.length; i++) {
+                        createPokemonEvolutions(evolutions.squirtle[i]);
+                    }
+                }
+                    if (pokemon.name == "charmande") {
+                        for (let i = 0 ; i < evolutions.charmander.length; i++) {
+                            createPokemonEvolutions(evolutions.charmander[i]);
+                        }
+                    }
+                
+                
 
             }
             if (showShiny.checked == true) {
