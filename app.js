@@ -7,17 +7,19 @@ const pokemonType = document.getElementById("pokemonType");
 const showShiny = document.getElementById("showShiny");
 const pokemonHeight = document.getElementById("pokemonHeight")
 const pokemonWeight = document.getElementById("pokemonWeight")
-const pokemonEvolution = document.getElementById("pokemonEvolutions")
+const pokemonEvolution = document.getElementById("pokemonEvolutions");
+
+let favoritePokemonList = [];
 
 const evolutions = {
     charmander: [
         {
             evolutionName: "Charmeleon",
-            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
         },
         {
             evolutionName: "Charizard",
-            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
         }
     ],
     squirtle: [
@@ -27,7 +29,7 @@ const evolutions = {
         },
         {
             evolutionName: "blastoise",
-            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+            evolutionImg: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
         }
     ],
     bulbasaur: [
@@ -48,8 +50,12 @@ button.addEventListener("click", (event) => {
 
 });
 
+addButton.addEventListener("click", () => {
+    favoritePokemonList.push(pokemon)
+})
+
 const getPokemon = (pokemon) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
         .then((response) => response.json())
         .then((pokemon) => {
             console.log(pokemon);
@@ -62,22 +68,21 @@ const getPokemon = (pokemon) => {
             if (pokemon.name.toLowerCase() == "bulbasaur") {
                 for (let i = 0; i < evolutions.bulbasaur.length; i++) {
                     createPokemonEvolutions(evolutions.bulbasaur[i]);
-                    
-                }
-                if (pokemon.name == "squirtle") {
-                    for (let i = 0 ; i < evolutions.squirtle.length; i++) {
-                        createPokemonEvolutions(evolutions.squirtle[i]);
-                    }
-                }
-                    if (pokemon.name == "charmande") {
-                        for (let i = 0 ; i < evolutions.charmander.length; i++) {
-                            createPokemonEvolutions(evolutions.charmander[i]);
-                        }
-                    }
-                
-                
 
+                }
             }
+
+            if (pokemon.name.toLowerCase() == "squirtle") {
+                for (let i = 0; i < evolutions.squirtle.length; i++) {
+                    createPokemonEvolutions(evolutions.squirtle[i]);
+                }
+            }
+            if (pokemon.name.toLowerCase() == "charmander") {
+                for (let i = 0; i < evolutions.charmander.length; i++) {
+                    createPokemonEvolutions(evolutions.charmander[i]);
+                }
+            }
+
             if (showShiny.checked == true) {
                 pokemonImage.setAttribute("src", pokemon.sprites.front_shiny);
             } else {
@@ -109,3 +114,9 @@ const createPokemonEvolutions = (evolution) => {
     evolutionImg.src = evolution.evolutionImg;
     pokemonEvolution.appendChild(evolutionName)
 }
+
+// agregar una lista de pokemones favoritos cuando el usuario de clic en el boton favoritos
+// el usuario solo debe poder ingresar valores alfabeticos
+// mostrar un checkbox que me permita ingresar solo numeros y vicerversa
+// adaptar la pokedex a dispositivos moviles
+// modificar pokedex pa que se vea chingona

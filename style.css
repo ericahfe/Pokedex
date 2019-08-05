@@ -10,15 +10,28 @@ body {
   font-size: 34px;
 }
 .pokedex__structure {
-  width: 600px;
-  border-radius: 10%;
-  margin-top: none;
+  max-width: 400px;
+  border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   margin-top: 120px;
-  background-color: #BDA1A1;
+  background-color: #bda1a1;
 }
+
+@media (min-width: 481px) {
+  .pokedex__structure {
+    background-color: red;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pokedex__structure {
+    margin-top: 0;
+    background-color: blue;
+  }
+}
+
 .pokedex__header {
   display: flex;
 }
@@ -62,7 +75,6 @@ body {
   width: 60%;
   height: 50px;
   font-size: 32px;
-  
 }
 #button {
   width: 20%;
@@ -72,28 +84,25 @@ body {
 .pokedex__form {
   display: flex;
   justify-content: center;
-  
 }
 .pokedex__showShiny {
   margin-left: 100px;
   padding: 30px;
 }
-#pokemonEvolutions{
+#pokemonEvolutions {
   display: flex;
   justify-content: space-around;
 }
-input:hover{
+input:hover {
   background-color: #c5c8c9;
 }
 input:focus {
-  
   background-color: #fafafa;
 }
 button:hover {
   color: aliceblue;
-   
 }
-button:focus{
+button:focus {
   color: #8b0000;
 }
 
