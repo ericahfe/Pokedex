@@ -10,18 +10,24 @@ body {
   font-size: 34px;
 }
 .pokedex__structure {
-  max-width: 400px;
+  max-width: 480px;
+  min-width: 300px;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-top: 120px;
   background-color: #bda1a1;
+  height: 100%;
+  
 }
 
 @media (min-width: 481px) {
   .pokedex__structure {
     background-color: red;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 500px;
+    
   }
 }
 
@@ -29,9 +35,11 @@ body {
   .pokedex__structure {
     margin-top: 0;
     background-color: blue;
+    max-width: 30%;
+    width: 100%;
+    margin-top: 60px;
   }
 }
-
 .pokedex__header {
   display: flex;
 }
@@ -39,6 +47,16 @@ body {
   width: 30px;
   height: 30px;
   align-self: center;
+}
+#buttonFavorite{
+  display: flex;
+  position: relative;
+  top: 0;
+  right: 0px;
+  width: 80px;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .pokemon__info {
   width: 100%;
@@ -81,13 +99,14 @@ body {
   height: 56px;
   background-color: #ff4343;
 }
+
 .pokedex__form {
   display: flex;
   justify-content: center;
 }
 .pokedex__showShiny {
-  margin-left: 100px;
-  padding: 30px;
+  margin-left: 10%;
+  
 }
 #pokemonEvolutions {
   display: flex;
@@ -109,6 +128,10 @@ button:focus {
 #pokemonType {
   width: 25%;
   margin-right: -70px;
+}
+.pokedex__favorite{
+  margin-bottom: 50px;
+  margin-left: 2rem;
 }
 .pokedex__type--grass {
   font-family: "Open Sans", sans-serif;

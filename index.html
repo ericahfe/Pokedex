@@ -18,6 +18,7 @@
       <div class="pokedex__header">
         <h2 class="pokedex__title">Pokedex</h2>
         <img class="pokedex__pokeball" src="img/pokeball.png">
+        <button id="buttonFavorite">Añadir a favoritos</button>
       </div>
       <div id="pokemonContainer">
         <div class="pokedex__margin__none">
@@ -48,9 +49,18 @@
         <label for="showShiny">Mostrar solo los Shiny</label>
         <input id="showShiny" type="checkbox">
       </div>
+      <div class="pokedex__showShiny">
+        <label for="findByID">Buscar pokemon por ID</label>
+        <input id="findByID" type="checkbox">
+      </div>
+      <div class="pokedex__favorite">
+      <h3>Mis pokemones favoritos</h3>
+      <p id="listOfPokemon"></p>
+    </div>
+  
     </article>
-
   </div>
+    
 
   <script src="app.js"></script>
 

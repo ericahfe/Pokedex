@@ -8,7 +8,9 @@ const showShiny = document.getElementById("showShiny");
 const pokemonHeight = document.getElementById("pokemonHeight")
 const pokemonWeight = document.getElementById("pokemonWeight")
 const pokemonEvolution = document.getElementById("pokemonEvolutions");
-
+const buttonFavorite = document.getElementById("buttonFavorite");
+const listOfPokemon = document.getElementById("listOfPokemon");
+const findByID = document.getElementById("findByID")
 let favoritePokemonList = [];
 
 const evolutions = {
@@ -50,8 +52,9 @@ button.addEventListener("click", (event) => {
 
 });
 
-addButton.addEventListener("click", () => {
-    favoritePokemonList.push(pokemon)
+buttonFavorite.addEventListener("click", () => {
+    favoritePokemonList.push(input.value);
+    console.log(favoritePokemonList)
 })
 
 const getPokemon = (pokemon) => {
@@ -65,6 +68,11 @@ const getPokemon = (pokemon) => {
             pokemonHeight.innerHTML = pokemon.height;
             pokemonWeight.innerHTML = pokemon.weight;
             pokemonEvolution.innerHTML = null;
+            listOfPokemon.innerHTML = favoritePokemonList;
+            if(findByID.checked == true) {
+                input.type = "number"
+            }
+
             if (pokemon.name.toLowerCase() == "bulbasaur") {
                 for (let i = 0; i < evolutions.bulbasaur.length; i++) {
                     createPokemonEvolutions(evolutions.bulbasaur[i]);
@@ -88,6 +96,8 @@ const getPokemon = (pokemon) => {
             } else {
                 pokemonImage.setAttribute("src", pokemon.sprites.front_default);
             }
+            
+            
 
             const pokemonTypes = pokemon.types; // arreglo del tipo de pokemon
 
@@ -115,8 +125,10 @@ const createPokemonEvolutions = (evolution) => {
     pokemonEvolution.appendChild(evolutionName)
 }
 
-// agregar una lista de pokemones favoritos cuando el usuario de clic en el boton favoritos
-// el usuario solo debe poder ingresar valores alfabeticos
-// mostrar un checkbox que me permita ingresar solo numeros y vicerversa
-// adaptar la pokedex a dispositivos moviles
-// modificar pokedex pa que se vea chingona
+
+
+// agregar una lista de pokemones favoritos cuando el usuario de clic en el boton favoritos >>
+// el usuario solo debe poder ingresar valores alfabeticos 
+// mostrar un checkbox que me permita ingresar solo numeros y vicerversa  >>
+// adaptar la pokedex a dispositivos moviles >>
+// modificar pokedex pa que se vea chingona 
