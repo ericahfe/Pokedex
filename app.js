@@ -10,7 +10,10 @@ const pokemonWeight = document.getElementById("pokemonWeight")
 const pokemonEvolution = document.getElementById("pokemonEvolutions");
 const buttonFavorite = document.getElementById("buttonFavorite");
 const listOfPokemon = document.getElementById("listOfPokemon");
-const findByID = document.getElementById("findByID")
+const findByID = document.getElementById("findByID");
+
+let currentPokemonName = "";
+
 let favoritePokemonList = [];
 
 const evolutions = {
@@ -52,10 +55,16 @@ button.addEventListener("click", (event) => {
 
 });
 
+
 buttonFavorite.addEventListener("click", () => {
-    favoritePokemonList.push(input.value);
-    console.log(favoritePokemonList)
+    if (currentPokemonName != "") {
+        favoritePokemonList.push(currentPokemonName);
+        listOfPokemon.innerHTML = favoritePokemonList;
+    }
 })
+
+
+
 
 const getPokemon = (pokemon) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
@@ -68,8 +77,10 @@ const getPokemon = (pokemon) => {
             pokemonHeight.innerHTML = pokemon.height;
             pokemonWeight.innerHTML = pokemon.weight;
             pokemonEvolution.innerHTML = null;
-            listOfPokemon.innerHTML = favoritePokemonList;
-            if(findByID.checked == true) {
+            currentPokemonName = pokemon.name;
+
+
+            if (findByID.checked == true) {
                 input.type = "number"
             }
 
@@ -96,8 +107,8 @@ const getPokemon = (pokemon) => {
             } else {
                 pokemonImage.setAttribute("src", pokemon.sprites.front_default);
             }
-            
-            
+
+
 
             const pokemonTypes = pokemon.types; // arreglo del tipo de pokemon
 
