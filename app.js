@@ -58,10 +58,13 @@ button.addEventListener("click", (event) => {
 
 buttonFavorite.addEventListener("click", () => {
     if (currentPokemonName != "") {
-        favoritePokemonList.push(currentPokemonName);
-        listOfPokemon.innerHTML = favoritePokemonList;
+
+        favoritePokemonList.push(currentPokemonName)
+        if (currentPokemonName)
+            listOfPokemon.innerHTML = favoritePokemonList;
     }
 })
+
 
 
 
@@ -136,6 +139,9 @@ const createPokemonEvolutions = (evolution) => {
     pokemonEvolution.appendChild(evolutionName)
 }
 
+const onlyNumbersRegex = new RegExp("0-9");
+
+alert("solo acepto numeros, prro")
 
 
 // agregar una lista de pokemones favoritos cuando el usuario de clic en el boton favoritos >>
@@ -143,3 +149,9 @@ const createPokemonEvolutions = (evolution) => {
 // mostrar un checkbox que me permita ingresar solo numeros y vicerversa  >>
 // adaptar la pokedex a dispositivos moviles >>
 // modificar pokedex pa que se vea chingona 
+
+// checar que no esten repetidos los pokemones
+// si el usuario da de alta mas de cinco pokemones en fav que ya no te deje agregar mas
+// investigar sobre expresiones regulares
+// si el usuario separa por comas los pokemones debes hacer la busqueda multiple
+
