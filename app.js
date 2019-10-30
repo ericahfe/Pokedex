@@ -11,6 +11,8 @@ const pokemonEvolution = document.getElementById("pokemonEvolutions");
 const buttonFavorite = document.getElementById("buttonFavorite");
 const listOfPokemon = document.getElementById("listOfPokemon");
 const findByID = document.getElementById("findByID");
+const onlyNumbersRegex = new RegExp(/\d{1,3}/);
+const pokemonNameRegex= new RegExp(/\w{3,11}/);
 
 let currentPokemonName = "";
 
@@ -83,9 +85,9 @@ const getPokemon = (pokemon) => {
             currentPokemonName = pokemon.name;
 
 
-            if (findByID.checked == true) {
-                input.type = "number"
-            }
+            
+        
+            if(findByID.checked== false)
 
             if (pokemon.name.toLowerCase() == "bulbasaur") {
                 for (let i = 0; i < evolutions.bulbasaur.length; i++) {
@@ -123,6 +125,19 @@ const getPokemon = (pokemon) => {
                 pokemonTypeName.classList.add(`pokedex__type--${pokemonTypes[i].type.name}`);
                 pokemonType.appendChild(pokemonTypeName);
             }
+            if (findByID.checked == true) {
+                input.value == onlyNumbersRegex
+                
+                return true; 
+                
+            }
+            
+            else {
+                alert("Disculpa pero debes desmarcar el checkbox");
+                return false;
+            }
+
+
         }
         )
 }
@@ -139,9 +154,8 @@ const createPokemonEvolutions = (evolution) => {
     pokemonEvolution.appendChild(evolutionName)
 }
 
-const onlyNumbersRegex = new RegExp("0-9");
 
-alert("solo acepto numeros, prro")
+
 
 
 // agregar una lista de pokemones favoritos cuando el usuario de clic en el boton favoritos >>
