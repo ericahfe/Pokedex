@@ -12,7 +12,7 @@ const buttonFavorite = document.getElementById("buttonFavorite");
 const listOfPokemon = document.getElementById("listOfPokemon");
 const findByID = document.getElementById("findByID");
 const onlyNumbersRegex = new RegExp(/\d{1,3}/);
-const pokemonNameRegex= new RegExp(/\w{3,11}/);
+const pokemonNameRegex= new RegExp(/\D{3,11}/);
 
 let currentPokemonName = "";
 
@@ -125,23 +125,49 @@ const getPokemon = (pokemon) => {
                 pokemonTypeName.classList.add(`pokedex__type--${pokemonTypes[i].type.name}`);
                 pokemonType.appendChild(pokemonTypeName);
             }
+
             if (findByID.checked == true) {
-                input.value == onlyNumbersRegex
-                
-                return true; 
-                
+                if (input.value.match(onlyNumbersRegex)) {
+                    alert("Hemos encontrado a tu pokemon")
+                    return true; 
+                } else {
+                    alert("Lo sentimos pero no hemos encontrado a tu pokemon")
+                }
             }
+
+            if(findByID.checked == false) {
+                if (input.value.match(pokemonNameRegex)) {
+                    alert("Hemos encontrado a tu pokemon")
+                    return true;
+                } else {
+                    
+                    alert("Lo sentimos pero no hemos encontrado a tu pokemon")
+                }
+            }
+
+           
             
-            else {
-                alert("Disculpa pero debes desmarcar el checkbox");
-                return false;
-            }
+            
+               // input.value.match(onlyNumbersRegex) ;
+                //alert("Hemos encontrado a tu pokemon") ;
+                //return true; 
+               /*if(findByID.checked == true) {
+                   input.value.match(!onlyNumbersRegex) ;
+                   alert("Lo sentimos pero no hemos encontrado a tu pokemon")
+                   return false;*/
+                
+                
+            
+            
 
 
         }
         )
 }
+bringMeAllInfo = () => {
+                    
 
+}
 
 
 const createPokemonEvolutions = (evolution) => {
